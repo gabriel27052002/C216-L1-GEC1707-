@@ -1,5 +1,5 @@
 // Exemplo de uso prático
-let nome = "Gabriel TeoDoro 1707";
+let nome = "Lucas GES134";
 function saudacaoPersonalizada(nome) {
     console.log("Olá, " + nome + "!");
 }

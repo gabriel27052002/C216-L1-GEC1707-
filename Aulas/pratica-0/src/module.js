@@ -1,6 +1,6 @@
 // arquivo modulo.js
 module.exports = {
-    mensagem: 'Gabriel Teodoro 1707 !',
+    mensagem: 'Testando modulo: Lucas - GES134 !',
     saudacao: function() {
       console.log(this.mensagem);
     }

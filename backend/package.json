@@ -1,0 +1,15 @@
+{
+  "name": "pratica-2",
+  "version": "1.0.0",
+  "description": "Pratica 2 - Metodos HTTP",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "Não há testes configurados"
+  },
+  "dependencies": {
+    "restify": "^8.5.1"
+  },
+  "author": "Gabriel Teodoro 1707",
+  "license": "ISC"
+}
