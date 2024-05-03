@@ -1,15 +1,15 @@
 {
-  "name": "pratica-2",
+  "name": "pratica-4",
   "version": "1.0.0",
-  "description": "Pratica 2 - Metodos HTTP",
+  "description": "Crud com restify.js",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "Não há testes configurados"
+    "start": "node src/index.js"
   },
   "dependencies": {
-    "restify": "^8.5.1"
+    "restify": "^8.5.1",
+    "pg": "^8.11.5"
   },
-  "author": "Gabriel Teodoro 1707",
+  "author": "Gabriel GEC1707",
   "license": "ISC"
 }
