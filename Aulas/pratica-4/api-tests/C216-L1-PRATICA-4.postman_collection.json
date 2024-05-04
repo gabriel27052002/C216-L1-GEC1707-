@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "d1c4731b-3c32-412d-88ca-b61a6b616bd2",
-		"name": "C216-L1-PRATICA-3",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "20017837"
+		"_postman_id": "92cba08c-88d5-4cdd-a4e4-bc6dc25a5afc",
+		"name": "C216-L1-PRATICA-4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21142925"
 	},
 	"item": [
 		{
@@ -27,14 +27,27 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nome\":\"Guilherme Aquino\",\r\n    \"disciplina\": \"Redes de Computadores\",\r\n    \"email\": \"aquino@inatel.br\"\r\n}",
+					"raw": "{\r\n    \"nome\":\"Lucas\",\r\n    \"curso\": \"GES\",\r\n    \"dataNascimento\": \"09/02/1992\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/v1/professor/inserir"
+				"url": {
+					"raw": "http://localhost:5000/api/v1/aluno/inserir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"aluno",
+						"inserir"
+					]
+				}
 			},
 			"response": []
 		},
@@ -59,14 +72,27 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nome\":\"Professor\",\r\n    \"disciplina\": \"Matéria que todos gostam\",\r\n    \"email\": \"professor@inatel.br\"\r\n}",
+					"raw": "{\r\n    \"nome\":\"Aluno\",\r\n    \"curso\": \"GES\",\r\n    \"dataNascimento\": \"09/05/1810\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/v1/professor/inserir"
+				"url": {
+					"raw": "http://localhost:5000/api/v1/aluno/inserir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"aluno",
+						"inserir"
+					]
+				}
 			},
 			"response": []
 		},
@@ -89,7 +115,20 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:5000/api/v1/professor/listar"
+				"url": {
+					"raw": "http://localhost:5000/api/v1/aluno/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"aluno",
+						"listar"
+					]
+				}
 			},
 			"response": []
 		},
@@ -114,14 +153,27 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\":\"Chris Lima\",\r\n    \"disciplina\": \"POO\",\r\n    \"email\": \"crhis.lima@inatel.br\"\r\n}",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\":\"Pedro\",\r\n    \"curso\": \"GES\",\r\n    \"dataNascimento\": \"09/02/1998\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/v1/professor/atualizar"
+				"url": {
+					"raw": "http://localhost:5000/api/v1/aluno/atualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"aluno",
+						"atualizar"
+					]
+				}
 			},
 			"response": []
 		},
@@ -144,7 +196,20 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:5000/api/v1/professor/listar"
+				"url": {
+					"raw": "http://localhost:5000/api/v1/aluno/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"aluno",
+						"listar"
+					]
+				}
 			},
 			"response": []
 		},
@@ -169,14 +234,27 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 2\r\n}",
+					"raw": "{\r\n    \"id\":2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/v1/professor/excluir"
+				"url": {
+					"raw": "http://localhost:5000/api/v1/aluno/excluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"aluno",
+						"excluir"
+					]
+				}
 			},
 			"response": []
 		},
@@ -199,12 +277,25 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:5000/api/v1/professor/listar"
+				"url": {
+					"raw": "http://localhost:5000/api/v1/aluno/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"aluno",
+						"listar"
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "DELETE END",
+			"name": "RESET DATABASE",
 			"event": [
 				{
 					"listen": "test",
@@ -220,18 +311,67 @@
 				}
 			],
 			"request": {
-				"method": "POST",
+				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 1\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/v1/professor/excluir"
+				"url": {
+					"raw": "http://localhost:5000/api/v1/database/reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"database",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ RESET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/aluno/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"aluno",
+						"listar"
+					]
+				}
 			},
 			"response": []
 		}
