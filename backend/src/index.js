@@ -2,7 +2,7 @@ const restify = require('restify');
 const { Pool } = require('pg');
 
 var server = restify.createServer({
-    name: 'pratica-4-MatheusJulidori',
+    name: 'pratica-4-GabrielTeodoro',
 });
 server.use(restify.plugins.bodyParser());
 
