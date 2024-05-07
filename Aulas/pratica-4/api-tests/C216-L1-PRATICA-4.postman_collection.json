@@ -1,10 +1,10 @@
 {
 	"info": {
 		"_postman_id": "92cba08c-88d5-4cdd-a4e4-bc6dc25a5afc",
-		"name": "C216-L1-PRATICA-4",
+		"name": "C216-L1-pratica4-Gabriel",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "21142925"
-	},
+	},2
 	"item": [
 		{
 			"name": "CREATE",

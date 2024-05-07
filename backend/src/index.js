@@ -2,10 +2,11 @@ const restify = require('restify');
 const { Pool } = require('pg');
 
 var server = restify.createServer({
-    name: 'pratica-4-GabrielTeodoro',
+    name: 'pratica-4-Gabriel',
 });
 server.use(restify.plugins.bodyParser());
 
+/*-----------------------Database-----------------------*/
 
 const pool = new Pool({
     user: process.env.POSTGRES_USER || 'postgres',
@@ -26,7 +27,7 @@ async function initDatabase() {
     }
 }
 
-
+/*-----------------------------Professor-----------------------------*/
 server.post('/api/v1/professor/inserir', async (req, res, next) => {
     const { nome, disciplina, email } = req.body;
 
@@ -70,8 +71,7 @@ server.post('/api/v1/professor/atualizar', async (req, res, next) => {
             res.send(200, result.rows[0]);
             console.log('Professor atualizado com sucesso:', result.rows[0]);
         }
-    } catch
-    (error) {
+    } catch (error) {
         res.send(500, { message: 'Erro ao atualizar professor' });
         console.error('Erro ao atualizar professor:', error);
     }
@@ -111,12 +111,6 @@ server.del('/api/v1/database/reset', async (req, res, next) => {
     return next();
 });
 
-
-
-
-// iniciar o servidor
-var port = process.env.PORT || 5000;
-
 server.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
@@ -131,8 +125,8 @@ server.use(function(req, res, next) {
     }
 });
 
-server.listen(port, function () {
-    console.log('Servidor iniciado', server.name, ' na url http://localhost:' + port);
+server.listen(5000, function () {
+    console.log('Servidor iniciado', server.name, ' na url http://localhost:5000');
     console.log('Iniciando banco de dados...');
     initDatabase();
-})
+});
