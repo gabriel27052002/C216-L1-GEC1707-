@@ -2,7 +2,7 @@ const restify = require('restify');
 const { Pool } = require('pg');
 
 var server = restify.createServer({
-    name: 'pratica-4-Gabriel',
+    name: 'pratica-4-gabriel',
 });
 server.use(restify.plugins.bodyParser());
 
@@ -71,7 +71,8 @@ server.post('/api/v1/professor/atualizar', async (req, res, next) => {
             res.send(200, result.rows[0]);
             console.log('Professor atualizado com sucesso:', result.rows[0]);
         }
-    } catch (error) {
+    } catch
+    (error) {
         res.send(500, { message: 'Erro ao atualizar professor' });
         console.error('Erro ao atualizar professor:', error);
     }
@@ -86,7 +87,7 @@ server.post('/api/v1/professor/excluir', async (req, res, next) => {
         if (result.rowCount === 0) {
             res.send(404, { message: 'Professor não encontrado' });
         } else {
-            res.send(204);
+            res.send(200, { message: 'Professor excluído com sucesso' });
             console.log('Professor excluído com sucesso');
         }
     } catch (error) {
@@ -101,8 +102,7 @@ server.del('/api/v1/database/reset', async (req, res, next) => {
     try {
         await pool.query('DROP TABLE IF EXISTS professores');
         await pool.query('CREATE TABLE IF NOT EXISTS professores (id SERIAL PRIMARY KEY, nome VARCHAR(255) NOT NULL, disciplina VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL)');
-        res.send(204);
-        console.log('Banco de dados resetado com sucesso');
+        res.send(200, { message: 'Banco de dados resetado com sucesso' });        console.log('Banco de dados resetado com sucesso');
     } catch (error) {
         res.send(500, { message: 'Erro ao resetar banco de dados' });
         console.error('Erro ao resetar banco de dados:', error);
@@ -110,6 +110,12 @@ server.del('/api/v1/database/reset', async (req, res, next) => {
 
     return next();
 });
+
+
+
+
+// iniciar o servidor
+var port = process.env.PORT || 5000;
 
 server.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -125,8 +131,8 @@ server.use(function(req, res, next) {
     }
 });
 
-server.listen(5000, function () {
-    console.log('Servidor iniciado', server.name, ' na url http://localhost:5000');
+server.listen(port, function () {
+    console.log('Servidor iniciado', server.name, ' na url http://localhost:' + port);
     console.log('Iniciando banco de dados...');
     initDatabase();
-});
+})

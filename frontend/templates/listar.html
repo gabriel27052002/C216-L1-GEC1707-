@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar professores</title>
+</head>
+<body>
+    <h1>Lista de professores</h1>
+    {% if professores %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>disciplina</th>
+                <th>email </th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for professor in professores %}
+            <tr>
+                <td>{{ professor.nome }}</td>
+                <td>{{ professor.disciplina }}</td>
+                <td>{{ professor.email }}</td>
+                <td>
+                    <form action="/excluir/{{ professor.id }}" method="POST">
+                        <input type="submit" value="Excluir">
+                    </form>
+                    <form action="/atualizar/{{ professor.id }}" method="GET">
+                        <input type="submit" value="Atualizar">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>Nenhum professor encontrado.</p>
+    {% endif %}
+    <li><a href="/">Home</a></li>
+</body>
+</html>

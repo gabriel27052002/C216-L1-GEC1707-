@@ -12,9 +12,9 @@
 
 - [Download Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-## Exemplo de crud de alunos com Restify
+## Exemplo de crud de professores com Restify
 
-A seguir, veremos como criar endpoints RESTful para gerenciamento de alunos. Utilizaremos o framework Node.js Restify para criar um servidor e implementar os métodos HTTP básicos para um CRUD de alunos.
+A seguir, veremos como criar endpoints RESTful para gerenciamento de professores. Utilizaremos o framework Node.js Restify para criar um servidor e implementar os métodos HTTP básicos para um CRUD de professores.
 
 ```javascript
 
@@ -28,61 +28,61 @@ var server = restify.createServer({
 // configurar o servidor para aceitar JSON e query
 server.use(restify.plugins.bodyParser());
 
-// Array para armazenar os alunos
-let alunos = [];
+// Array para armazenar os professores
+let professores = [];
 
 // Middleware para permitir o parsing do corpo da requisição
 server.use(restify.plugins.bodyParser());
 
-// Endpoint para inserir um novo aluno
-server.post('/api/v1/aluno/inserir', (req, res, next) => {
-    const { nome, curso, dataNascimento } = req.body;
+// Endpoint para inserir um novo professor
+server.post('/api/v1/professor/inserir', (req, res, next) => {
+    const { nome, disciplina, email } = req.body;
 
     // Simulação de inserção no banco de dados
-    const novoAluno = {
-        id: alunos.length + 1, // Simulação de um ID único
+    const novoprofessor = {
+        id: professores.length + 1, // Simulação de um ID único
         nome,
-        curso,
-        dataNascimento
+        disciplina,
+        email
     };
 
-    alunos.push(novoAluno);
+    professores.push(novoprofessor);
 
-    res.send(201, novoAluno);
+    res.send(201, novoprofessor);
     return next();
 });
 
-// Endpoint para listar todos os alunos
-server.get('/api/v1/aluno/listar', (req, res, next) => {
-    res.send(alunos);
+// Endpoint para listar todos os professores
+server.get('/api/v1/professor/listar', (req, res, next) => {
+    res.send(professores);
     return next();
 });
 
-// Endpoint para atualizar um aluno existente
-server.post('/api/v1/aluno/atualizar', (req, res, next) => {
-    const { id, nome, curso, dataNascimento } = req.body;
+// Endpoint para atualizar um professor existente
+server.post('/api/v1/professor/atualizar', (req, res, next) => {
+    const { id, nome, disciplina, email } = req.body;
 
-    const alunoIndex = alunos.findIndex(aluno => aluno.id === id);
-    if (alunoIndex === -1) {
-        res.send(404, { message: 'Aluno não encontrado' });
+    const professorIndex = professores.findIndex(professor => professor.id === id);
+    if (professorIndex === -1) {
+        res.send(404, { message: 'professor não encontrado' });
     } else {
-        alunos[alunoIndex] = { id, nome, curso, dataNascimento };
-        res.send(200, alunos[alunoIndex]);
+        professores[professorIndex] = { id, nome, disciplina, email };
+        res.send(200, professores[professorIndex]);
     }
 
     return next();
 });
 
-// Endpoint para excluir um aluno pelo ID
-server.post('/api/v1/aluno/excluir', (req, res, next) => {
+// Endpoint para excluir um professor pelo ID
+server.post('/api/v1/professor/excluir', (req, res, next) => {
     const { id } = req.body;
 
-    const alunoIndex = alunos.findIndex(aluno => aluno.id === id);
-    if (alunoIndex === -1) {
-        res.send(404, { message: 'Aluno não encontrado' });
+    const professorIndex = professores.findIndex(professor => professor.id === id);
+    if (professorIndex === -1) {
+        res.send(404, { message: 'professor não encontrado' });
     } else {
-        alunos.splice(alunoIndex, 1);
-        res.send(200, { message: 'Aluno excluído com sucesso' });
+        professores.splice(professorIndex, 1);
+        res.send(200, { message: 'professor excluído com sucesso' });
     }
 
     return next();
@@ -98,7 +98,7 @@ server.listen(port, function() {
 
 ```
 
-Este é um exemplo simples de crud de alunos. O exemplo acima mostra como criar um servidor Restify e implementar os métodos HTTP básicos para um CRUD de alunos.
+Este é um exemplo simples de crud de professores. O exemplo acima mostra como criar um servidor Restify e implementar os métodos HTTP básicos para um CRUD de professores.
 Ainda não utilizaremos banco de dados. Vamos utilizar o Postman para testar os metodos HTTP.
 
 ---
@@ -138,7 +138,7 @@ Utilizaremos apenas body como payload para os metodos HTTP.
 6. Suba o os prints dos resultados para a pasta pratica-3/img.
 7. Subir o export do postman para a pasta pratica-3/api-tests.
 
-Este exercício permitirá que você pratique a criação de endpoints RESTful para gerenciamento de recursos, manipulação de dados em memória e interação com uma API utilizando Restify em Node.js. Ao completá-lo, você estará mais familiarizado com esses conceitos, o que será útil para projetos futuros.
+Este exercício permitirá que você pratique a criação de endpoints RESTful para gerenciamento de redisciplinas, manipulação de dados em memória e interação com uma API utilizando Restify em Node.js. Ao completá-lo, você estará mais familiarizado com esses conceitos, o que será útil para projetos futuros.
 
 ## OBSERVAÇÃO IMPORTANTE
 
