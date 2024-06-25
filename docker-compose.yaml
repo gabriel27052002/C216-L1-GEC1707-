@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: professores
+      POSTGRES_DB: livros
     ports:
       - "5432:5432"
     volumes:
@@ -24,7 +24,7 @@ services:
       NODE_ENV: development
       POSTGRES_USER: postgres
       POSTGRES_HOST: db
-      POSTGRES_DB: professores
+      POSTGRES_DB: livros
       POSTGRES_PASSWORD: password
       POSTGRES_PORT: 5432
 

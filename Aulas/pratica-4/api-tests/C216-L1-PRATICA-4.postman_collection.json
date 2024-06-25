@@ -27,14 +27,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nome\":\"Romario\",\r\n    \"disciplina\": \"Fisica\",\r\n    \"email\": \"romario1376@gmail.com\"\r\n}",
+					"raw": "{\r\n    \"autor\":\"Romario\",\r\n    \"nome_livro\": \"Fisica\",\r\n    \"categoria\": \"romario1376@gmail.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/v1/professor/inserir"
+				"url": "http://localhost:5000/api/v1/livros/inserir"
 			},
 			"response": []
 		},
@@ -59,14 +59,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nome\":\"Ronaldo\",\r\n    \"disciplina\": \"Musica\",\r\n    \"email\": \"ronaldofenomeno@gmail.com\"\r\n}",
+					"raw": "{\r\n    \"autor\":\"Ronaldo\",\r\n    \"nome_livro\": \"Musica\",\r\n    \"categoria\": \"ronaldofeautorno@gmail.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/v1/professor/inserir"
+				"url": "http://localhost:5000/api/v1/livros/inserir"
 			},
 			"response": []
 		},
@@ -89,7 +89,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:5000/api/v1/professor/listar"
+				"url": "http://localhost:5000/api/v1/livros/listar"
 			},
 			"response": []
 		},
@@ -114,14 +114,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\":\"Gilberto\",\r\n    \"disciplina\": \"M008\",\r\n    \"email\": \"GILBERTOMIRANDA@GMAIL.COM\"\r\n}",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"autor\":\"Gilberto\",\r\n    \"nome_livro\": \"M008\",\r\n    \"categoria\": \"GILBERTOMIRANDA@GMAIL.COM\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/v1/professor/atualizar"
+				"url": "http://localhost:5000/api/v1/livros/atualizar"
 			},
 			"response": []
 		},
@@ -144,7 +144,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:5000/api/v1/professor/listar"
+				"url": "http://localhost:5000/api/v1/livros/listar"
 			},
 			"response": []
 		},
@@ -176,7 +176,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/v1/professor/excluir"
+				"url": "http://localhost:5000/api/v1/livros/excluir"
 			},
 			"response": []
 		},
@@ -199,7 +199,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:5000/api/v1/professor/listar"
+				"url": "http://localhost:5000/api/v1/livros/listar"
 			},
 			"response": []
 		},
@@ -231,7 +231,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:5000/api/v1/professor/excluir"
+				"url": "http://localhost:5000/api/v1/livros/excluir"
 			},
 			"response": []
 		}
